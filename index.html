@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2 - Варіант 2</title>
+    <!-- Підключаємо згенерований CSS файл -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-gray-100 font-sans m-0 p-0">
+
+    <!-- Головний контейнер для двоколонкового макета -->
+    <div class="flex flex-col md:flex-row min-h-screen">
+        
+        <!-- Ліве меню (на великих екранах фіксоване, на мобільних зверху) -->
+        <aside class="w-full md:w-64 bg-darkSidebar text-white p-6 flex flex-col justify-between">
+          <div>
+            <!-- Логотип -->
+            <div class="bg-white text-black font-bold p-3 text-center rounded mb-8 text-xl shadow">
+              LOGO
+            </div>
+            
+            <!-- Навігаційні секції (Section 1 - Section 8) -->
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 1</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 2</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 3</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 4</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 5</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 6</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 7</a>
+              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 8</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Права частина з контентом та адаптивною сіткою -->
+        <main class="flex-1 p-6 md:p-8">
+            <h1 class="text-3xl font-bold text-customBlue mb-6">Панель керування контентом</h1>
+            
+            <!-- Адаптивна сітка для секцій -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Блок 1: Зображення / Медіа -->
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                    <div class="h-40 bg-gray-300 rounded flex items-center justify-center text-gray-600 mb-4 font-semibold">
+                        [ Зображення / Медіа-картка ]
+                    </div>
+                    <h2 class="text-xl font-bold mb-2">Заголовок секції</h2>
+                    <p class="text-gray-600 mb-4 text-sm leading-normal">Опис вмісту блоку з використанням утилітарних класів Tailwind CSS для адаптивності.</p>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Детальніше</button>
+                </div>
+
+                <!-- Блок 2: Текстовий контент -->
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">Інформаційний блок</h2>
+                        <p class="text-gray-600 mb-4 leading-normal">Додаткова інформація сайту, яка змінює своє положення залежно від розміру екрана завдяки брейкпоінтам сітки.</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded border-l-4 border-blue-500 text-sm text-blue-800">
+                        Використовується мобільний дизайн (mobile-first) та гнучкий Grid Layout.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

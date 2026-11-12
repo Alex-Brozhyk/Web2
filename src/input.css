@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  /* Додаємо власний кастомний колір або шрифт під вимоги лаби */
+  --color-customBlue: #1e40af;
+  --color-darkSidebar: #0f172a;
+}
