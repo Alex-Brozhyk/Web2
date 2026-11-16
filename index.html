@@ -3,66 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота №2 - Варіант 2</title>
-    <!-- Підключаємо згенерований CSS файл -->
+    <title>Лабораторна робота №3 - Варіант 2 (Калькулятор)</title>
+    <!-- Підключаємо існуючий Tailwind CSS та додаткові стилі -->
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./custom.css">
 </head>
 <body class="bg-gray-100 font-sans m-0 p-0">
 
     <!-- Головний контейнер для двоколонкового макета -->
     <div class="flex flex-col md:flex-row min-h-screen">
         
-        <!-- Ліве меню (на великих екранах фіксоване, на мобільних зверху) -->
+        <!-- Ліве меню -->
         <aside class="w-full md:w-64 bg-darkSidebar text-white p-6 flex flex-col justify-between">
-          <div>
-            <!-- Логотип -->
-            <div class="bg-white text-black font-bold p-3 text-center rounded mb-8 text-xl shadow">
-              LOGO
+            <div>
+                <!-- Логотип -->
+                <div class="bg-white text-black font-bold p-3 text-center rounded mb-8 text-xl shadow">
+                    LOGO
+                </div>
+                
+                <!-- Навігаційні секції з інтерактивним згортанням/розгортанням -->
+                <nav class="flex flex-col space-y-2" id="sidebar-nav">
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 1 (Калькулятор)</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300">
+                            <a href="#calculator-section" class="block py-1 hover:text-white">Перейти до форми</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 2 (Історія)</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <a href="#history-section" class="block py-1 hover:text-white">Логування операцій</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 3</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Підрозділ 3.1</p>
+                            <p class="py-1">Підрозділ 3.2</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 4</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Інформація секції 4</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 5</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Інформація секції 5</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 6</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Інформація секції 6</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 7</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Інформація секції 7</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button type="button" class="nav-toggle w-full text-left p-2 rounded hover:bg-gray-700 transition flex justify-between items-center font-semibold">
+                            <span>Section 8</span>
+                            <span class="arrow transition-transform duration-200">▼</span>
+                        </button>
+                        <div class="nav-content pl-4 py-2 text-sm text-gray-300 hidden">
+                            <p class="py-1">Інформація секції 8</p>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            
-            <!-- Навігаційні секції (Section 1 - Section 8) -->
-            <nav class="flex flex-col space-y-2">
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 1</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 2</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 3</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 4</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 5</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 6</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 7</a>
-              <a href="#" class="p-2 rounded hover:bg-gray-700 transition">Section 8</a>
-            </nav>
-          </div>
         </aside>
 
         <!-- Права частина з контентом та адаптивною сіткою -->
         <main class="flex-1 p-6 md:p-8">
-            <h1 class="text-3xl font-bold text-customBlue mb-6">Панель керування контентом</h1>
+            <h1 class="text-3xl font-bold text-customBlue mb-6">Панель керування контентом — Лабораторна №3</h1>
             
             <!-- Адаптивна сітка для секцій -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Блок 1: Зображення / Медіа -->
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-200">
-                    <div class="h-40 bg-gray-300 rounded flex items-center justify-center text-gray-600 mb-4 font-semibold">
-                        [ Зображення / Медіа-картка ]
-                    </div>
-                    <h2 class="text-xl font-bold mb-2">Заголовок секції</h2>
-                    <p class="text-gray-600 mb-4 text-sm leading-normal">Опис вмісту блоку з використанням утилітарних класів Tailwind CSS для адаптивності.</p>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Детальніше</button>
-                </div>
+                
+                <!-- Секція 1: Форма у вигляді калькулятора -->
+                <section id="calculator-section" class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                    <h2 class="text-xl font-bold mb-4 text-customBlue">Калькулятор</h2>
+                    
+                    <form id="calc-form" class="space-y-4">
+                        <!-- Поле 1 -->
+                        <div>
+                            <label for="num1" class="block text-sm font-semibold text-gray-700 mb-1">Перше число:</label>
+                            <input type="number" step="any" id="num1" placeholder="Введіть число..." required
+                                   class="custom-input w-full p-2 border border-gray-300 rounded">
+                        </div>
 
-                <!-- Блок 2: Текстовий контент -->
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-200 flex flex-col justify-between">
+                        <!-- Поле 2 -->
+                        <div>
+                            <label for="num2" class="block text-sm font-semibold text-gray-700 mb-1">Друге число:</label>
+                            <input type="number" step="any" id="num2" placeholder="Введіть число..." required
+                                   class="custom-input w-full p-2 border border-gray-300 rounded">
+                        </div>
+
+                        <!-- Випадаючий список "Зберегти до історії" -->
+                        <div>
+                            <label for="save-history" class="block text-sm font-semibold text-gray-700 mb-1">Зберегти до історії:</label>
+                            <select id="save-history" class="custom-input w-full p-2 border border-gray-300 rounded bg-white">
+                                <option value="yes">Так</option>
+                                <option value="no">Ні</option>
+                            </select>
+                        </div>
+
+                        <!-- Кнопки операцій: "+", "-", "/", "*" -->
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-700 mb-2">Оберіть операцію:</span>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button type="button" data-op="+" class="op-btn bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">+</button>
+                                <button type="button" data-op="-" class="op-btn bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">-</button>
+                                <button type="button" data-op="*" class="op-btn bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">*</button>
+                                <button type="button" data-op="/" class="op-btn bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">/</button>
+                            </div>
+                        </div>
+
+                        <!-- Поле для відображення результату на формі -->
+                        <div class="bg-blue-50 p-4 rounded border-l-4 border-blue-500">
+                            <span class="text-sm font-semibold text-blue-800">Результат виконання: </span>
+                            <span id="calc-result" class="text-lg font-bold text-black">—</span>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Секція 2: Логування (список історії виконаних операцій) -->
+                <section id="history-section" class="bg-white p-6 rounded-lg shadow border border-gray-200 flex flex-col justify-between">
                     <div>
-                        <h2 class="text-xl font-bold mb-2">Інформаційний блок</h2>
-                        <p class="text-gray-600 mb-4 leading-normal">Додаткова інформація сайту, яка змінює своє положення залежно від розміру екрана завдяки брейкпоінтам сітки.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-customBlue">Історія операцій</h2>
+                            <button type="button" id="clear-history" 
+                                    class="bg-red-500 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition">
+                                Очистити
+                            </button>
+                        </div>
+                        
+                        <p id="empty-history-msg" class="text-gray-600 text-sm mb-2">Історія порожня. Виконайте обчислення з увімкненим збереженням.</p>
+                        
+                        <!-- Список логів -->
+                        <ul id="history-list" class="space-y-2 max-h-80 overflow-y-auto">
+                            <!-- Сюди JS додаватиме записи -->
+                        </ul>
                     </div>
-                    <div class="bg-blue-50 p-4 rounded border-l-4 border-blue-500 text-sm text-blue-800">
-                        Використовується мобільний дизайн (mobile-first) та гнучкий Grid Layout.
-                    </div>
-                </div>
+
+                   
+                </section>
+
             </div>
         </main>
     </div>
 
+    <!-- Підключаємо зовнішній файл JavaScript -->
+    <script src="./script.js"></script>
 </body>
 </html>

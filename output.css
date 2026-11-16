@@ -487,3 +487,54 @@
     }
   }
 }
+
+.custom-input {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.2);
+}
+
+.op-btn {
+    background-color: #1e40af;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+.op-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.op-btn:active {
+    transform: scale(0.97);
+}
+
+#clear-history {
+    background-color: #dc2626;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#clear-history:hover {
+    background-color: #b91c1c;
+}
+
+.history-item {
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
